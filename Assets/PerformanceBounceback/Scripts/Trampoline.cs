@@ -27,6 +27,7 @@ public class Trampoline : MonoBehaviour {
             scoreScript.score++;
             //Particle effect
             pSystem.Play();
+            Score.instance.UpdateScore();
 
            // Debug.Log("Trampoline Hit");
         }

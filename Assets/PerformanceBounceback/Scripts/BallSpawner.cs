@@ -41,15 +41,18 @@ public GameObject GetPooledBall()
     {
         ballPoolNum = 0;
     }
-    //if we’ve run out of objects in the pool too quickly, create a new one
+
+   /* //if we’ve run out of objects in the pool too quickly, create a new one
     if (pooledBalls[ballPoolNum].activeInHierarchy)
     {
+
+            Debug.Log("Timne");
         //create a new bullet and add it to the bulletList
-         obj= Instantiate(pooledBall);
+        obj= Instantiate(pooledBall);
         pooledBalls.Add(obj);
         ballsAmount++;
         ballPoolNum = ballsAmount - 1;
-    }
+    }*/
         //Debug.Log(ballPoolNum);
         return pooledBalls[ballPoolNum];
 }

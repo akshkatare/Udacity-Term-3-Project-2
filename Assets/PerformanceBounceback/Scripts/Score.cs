@@ -7,13 +7,16 @@ public class Score : MonoBehaviour {
 
     public GameManager gameManager;
     Text text;
-	// Use this for initialization
+    public static Score instance;
+	// Use this for initializatio
+
 	void Start () {
+        instance = this;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public void UpdateScore () {
 
         text = GetComponentInChildren<Text>();
         text.text = "Score: " + gameManager.score.ToString();
